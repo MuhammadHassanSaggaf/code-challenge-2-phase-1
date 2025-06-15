@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>GuestifyHQ</title>
+
+		<link rel="stylesheet" href="./style.css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script src="./src/index.js" defer></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<form class="form" id="guest-form" onsubmit="return false;">
+				<div class="guest-details">
+					<div class="app-details">
+						<h1 class="app-name">GuestifyHQ</h1>
+						<h2 class="app-description">
+							Bringing the power of guest list management to your fingertips.
+						</h2>
+					</div>
+
+					<div class="input-group">
+						<div class="event-details">
+							<label for="guestDate" class="input-label"
+								>Event Date and time</label
+							>
+							<input type="date" class="userDetails" id="guestDate" required />
+							<input type="time" class="userDetails" id="guestTime" required />
+						</div>
+
+						<label for="guestName" class="input-label">Guest Name</label>
+						<input
+							type="text"
+							class="userDetails"
+							id="guestName"
+							placeholder="Enter guest name."
+							required
+						/>
+
+						<label for="guestClass" class="input-label">Guest Class</label>
+						<input
+							type="text"
+							class="userDetails"
+							id="guestClass"
+							placeholder="Enter guest class."
+							required
+						/>
+					</div>
+
+					<button class="addGuest" type="button">Add Guest</button>
+
+					<div class="guestList">
+						<table>
+							<thead>
+								<tr>
+									<th>Guest Name</th>
+									<th>Guest Class</th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody id="guestListBody"></tbody>
+						</table>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
